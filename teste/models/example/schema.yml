@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: public
+    database: data_girls_live_coding
+    tables:
+      - name: taylor_swift_spotify
+
+models:
+  - name: taylor_swift_spotify
+    description: "Tabela com dados de músicas da Taylor Swift"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
