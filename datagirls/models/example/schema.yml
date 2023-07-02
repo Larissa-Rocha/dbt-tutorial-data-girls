@@ -1,0 +1,51 @@
+
+version: 2
+
+sources:
+  - name: public
+    database: data_girls_live_coding
+    tables:
+      - name: taylor_swift_raw
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  
+  - name: stg_taylor_swift
+    description: "Tabela de transformação de tipos e nomes de colunas"
+    columns:
+      - name: id
+        description: "chave primária"
+        tests:
+          - unique
+          - not_null
+  
+  - name: song_metrics
+    description: "Tabela com métricas pré agregadas por album"
+    columns:
+      - name: name_album
+        description: "Nome do album"
+      - name: avg_acousticness
+        description: "Média do acústico"
+      - name: avg_danceability
+        description: "média da dançabilidade"
+      - name: avg_energy
+        description: "média da energia"
+      - name: avg_popularity
+        description: "média da popularidade das músicas do album"
+
