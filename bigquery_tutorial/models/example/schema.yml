@@ -2,8 +2,8 @@
 version: 2
 
 sources:
-  - name: public
-    database: raw
+  - name: raw
+    database: dbt-learning-399600
     tables:
       - name: categories
 

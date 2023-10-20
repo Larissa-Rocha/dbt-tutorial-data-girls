@@ -1,3 +1,3 @@
 {{ config(materialized='table') }}
 
-select * from {{ source('public', 'categories') }}
+select * from {{ source('raw', 'categories') }}
